@@ -5,9 +5,11 @@ const app = express()
 const port  = 3006
 
 const userRouter = require('./app/controllers/usercontroller')
+const addressRouter = require('./app/controllers/addressController')
 
 app.use(express.json())
 app.use('/users', userRouter)
+app.use('/address', addressRouter)
 
 app.listen(port, ()=>{
     console.log('listening to port ', port)
