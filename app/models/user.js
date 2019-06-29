@@ -37,9 +37,17 @@ const userSchema = new Schema({
                 deafault: Date.now()
             }
         }
-    ]
+    ], 
+    role: {
+        type: String,
+        require: true,
+        default: 'user'
+    }
+    
 
 })
+
+
 
 userSchema.pre('save', function(next){
     const user = this
