@@ -34,7 +34,7 @@ router.put('/:id', authenticateUser, (req, res)=>{
         .catch(err=>res.send(err))
 })
 
-review('/:id', authenticateUser, (req,res)=>{
+router.delete('/:id', authenticateUser, (req,res)=>{
     const id = req.params.id
     Review.findOneAndDelete({
         _id: id
