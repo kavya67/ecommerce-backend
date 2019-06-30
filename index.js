@@ -8,12 +8,14 @@ const userRouter = require('./app/controllers/usercontroller')
 const addressRouter = require('./app/controllers/addressController')
 const categoryRouter  = require('./app/controllers/admin/categoryController')
 const productRouter = require('./app/controllers/admin/productController')
+const reviewRouter = require('./app/controllers/reviewController')
 
 app.use(express.json())
 app.use('/users', userRouter)
 app.use('/address', addressRouter)
 app.use('/category', categoryRouter)
 app.use('/product', productRouter)
+app.use('/review', reviewRouter)
 
 app.listen(port, ()=>{
     console.log('listening to port ', port)
